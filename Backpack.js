@@ -11,7 +11,7 @@ class Backpack {
     dataRequired
   ) {
     this.name = name;
-    this.backpackImage = backpackImage;
+
     this.volume = volume;
     this.color = color;
     this.pocketNum = pocketNum;
@@ -21,6 +21,7 @@ class Backpack {
     };
     this.dataRequired = dataRequired;
     this.lidOpen = lidOpen;
+    this.backpackImage = backpackImage;
   }
 
   updateStrapLength(newLeftLength, newRightLength) {

@@ -12,9 +12,6 @@ const everydayPack = new Backpack(
   "January 17, 2022 5:57:00 PST"
 );
 
-const main = document.querySelector(".main-content");
-console.log("this is main", main);
-
 const content = `
          <article class="backpack" id="everyday">
     <figure class="backpack__image">
@@ -45,31 +42,7 @@ const content = `
   </article>
 `;
 
-{
-  /* <article class="article">
-            <figure class="figure">
-             <img src=${bkObj.backpackImage} alt="">
-            </figure>
-            <h1> Name: ${bkObj.name}</h1>
-            <ul class="features">
-                  
-                <li> Volume: <span>${bkObj.volume}</span> </li>
-                <li> Color: <span> ${bkObj.color}</span> </li>
-                <li> The number of pockets:<span> ${
-                  bkObj.pocketNum
-                }</span> </li>
-                <li>  Left strap length:<span>${
-                  bkObj.strapLength.left
-                } </span></li>
-                </li> Left strap length:<span> ${
-                  bkObj.strapLength.right
-                } </span> </li>
-                <li>Lid status: <span> ${bkObj.lidOpen} </span> </li>
-                <li> The date aquired is: <span> ${bkObj.BackpackkAge()}</span> </li>
-            </ul>
-        </article> */
-}
-
+const main = document.querySelector(".main-content");
 main.innerHTML = content;
 
 // console.log("bojc", bkObj);
