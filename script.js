@@ -42,7 +42,26 @@ const content = `
   </article>
 `;
 
+const paragraph = ` 
+        If you're carrying a heavy load, you can't find a better tool than a
+        backpack. Distributing the weight evenly across your shoulders, back,
+        and hips, the backpack lets you use the natural frame of your body to
+        literally <em>shoulder</em> the weight while your legs do the
+        carrying.
+    `;
+
+const htmparagraph = document.querySelector("paragraph");
+
 const main = document.querySelector(".main-content");
+
+const newElement = document.createElement("p");
+
+// newElement.createTextNode(paragraph);
+newElement.innerHTML = paragraph;
+//htmparagraph.innerHTML = paragraph;
+
+// htmparagraph.appendChild(newElement);
+
 main.innerHTML = content;
 
 // console.log("bojc", bkObj);
