@@ -57,12 +57,33 @@ newElement.classList.add("backpack");
 newElement.setAttribute("id", "everyday");
 newElement.innerHTML = content;
 
+const list = `
+
+<li><a href="#"> Home</a></li>
+<li> <a href="#">About</a></li>
+<li><a href="#"> Contact</a></li>
+<li><a href="#">Login</a></li>
+<li><a href="#">LogOut</a></li>
+
+`;
+const nav = document.createElement("nav");
+nav.classList.add("navbar");
+nav.setAttribute("id", "navbar");
+
+const ul = document.createElement("ul");
+ul.classList.add("main-list");
+ul.setAttribute("id", "main-li");
+ul.innerHTML = list;
+nav.append(ul);
+const header = document.querySelector("header");
+header.prepend(nav);
+// nav.insertBefore(header);
+
 const paragraph = document.createElement("p");
 paragraph.classList.add("paragraph");
 paragraph.setAttribute("id", "paragraph");
 const footer = document.querySelector(".site-footer");
 paragraph.innerHTML = parag;
-
 footer.appendChild(paragraph);
 //inserting html elt into dom elt
 // footer.insertAdjacentHTML("beforebegin", "<p>dom</p>");
