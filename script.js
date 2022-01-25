@@ -13,7 +13,7 @@ const everydayPack = new Backpack(
 );
 
 const content = `
-         <article class="backpack" id="everyday">
+       
     <figure class="backpack__image">
       <img  class="image" src=${everydayPack.backpackImage} alt="" />
     </figure>
@@ -39,10 +39,10 @@ const content = `
         everydayPack.lidOpen
       }</span></li>
     </ul>
-  </article>
+ 
 `;
 
-const paragraph = ` 
+const parag = `
         If you're carrying a heavy load, you can't find a better tool than a
         backpack. Distributing the weight evenly across your shoulders, back,
         and hips, the backpack lets you use the natural frame of your body to
@@ -50,19 +50,26 @@ const paragraph = `
         carrying.
     `;
 
-const htmparagraph = document.querySelector("paragraph");
-
 const main = document.querySelector(".main-content");
 
-const newElement = document.createElement("p");
+const newElement = document.createElement("article");
+newElement.classList.add("backpack");
+newElement.setAttribute("id", "everyday");
+newElement.innerHTML = content;
 
-// newElement.createTextNode(paragraph);
-newElement.innerHTML = paragraph;
-//htmparagraph.innerHTML = paragraph;
+const paragraph = document.createElement("p");
+paragraph.classList.add("paragraph");
+paragraph.setAttribute("id", "paragraph");
+const footer = document.querySelector(".site-footer");
+paragraph.innerHTML = parag;
 
-// htmparagraph.appendChild(newElement);
-
-main.innerHTML = content;
+footer.appendChild(paragraph);
+//inserting html elt into dom elt
+// footer.insertAdjacentHTML("beforebegin", "<p>dom</p>");
+// footer.insertAdjacentHTML("afterbegin", "<p>dom</p>");
+// footer.insertAdjacentHTML("beforeend", "<p>dom</p>");
+// footer.insertAdjacentHTML("afterend", "<p>dom</p>");
+main.append(newElement);
 
 // console.log("bojc", bkObj);
 // console.log("volume", bkObj.volume);
