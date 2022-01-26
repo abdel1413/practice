@@ -52,6 +52,18 @@ const parag = `
 
 const main = document.querySelector(".main-content");
 
+//classList has:
+// elt.classList.add('param')
+// elt.classList.remove('para')
+//elt.classList.toggle('param')
+//elt.classList.replace('old','new')
+
+//attribut has:
+//doc.hasAttribute('param')
+//doc.getAttribute('param')
+//doc.setAttribute("old",'new') //to set or to create attribute
+//doc.removeAttribute('param')
+
 const newElement = document.createElement("article");
 newElement.classList.add("backpack");
 newElement.setAttribute("id", "everyday");
@@ -85,6 +97,7 @@ paragraph.setAttribute("id", "paragraph");
 const footer = document.querySelector(".site-footer");
 paragraph.innerHTML = parag;
 footer.appendChild(paragraph);
+
 //inserting html elt into dom elt
 // footer.insertAdjacentHTML("beforebegin", "<p>dom</p>");
 // footer.insertAdjacentHTML("afterbegin", "<p>dom</p>");
@@ -92,5 +105,35 @@ footer.appendChild(paragraph);
 // footer.insertAdjacentHTML("afterend", "<p>dom</p>");
 main.append(newElement);
 
+// styling  title BACKPACK with color purple
+var color = "lightgray";
+var color2 = "green";
+
+//get the class
+document.querySelector(".backpack__name").style.backgroundColor = color;
+document.querySelector(".backpack__name").style.innerHTML = color2;
+
+function headingColor() {
+  let col = "blue";
+  document.querySelector(".backpack__name").style.color = col;
+}
+
+headingColor();
+
+const siteheader = () => {
+  let color = "green";
+  document.querySelector(".site-header").style.color = color;
+};
+siteheader();
+
+var anothercolor = "red";
+let sitedesc = document.querySelector(".site-description");
+sitedesc.style.color = anothercolor;
+
+const mainList = () => {
+  let main = "blue";
+  document.querySelector(".navbar").style.color = main;
+};
+mainList();
 // console.log("bojc", bkObj);
 // console.log("volume", bkObj.volume);
