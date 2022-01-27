@@ -106,16 +106,17 @@ footer.appendChild(paragraph);
 main.append(newElement);
 
 // styling  title BACKPACK with color purple
-var color = "lightgray";
-var color2 = "green";
+var color = "red";
+var color2 = "black";
 
 //get the class
-document.querySelector(".backpack__name").style.backgroundColor = color;
-document.querySelector(".backpack__name").style.innerHTML = color2;
+document.querySelector(".left").style.backgroundColor = color;
+document.querySelector(".left .color-value").innerHTML = color;
 
 function headingColor() {
-  let col = "blue";
-  document.querySelector(".backpack__name").style.color = col;
+  color = "black";
+  document.querySelector(".right").style.backgroundColor = color;
+  document.querySelector(".right .color-value").innerHTML = color;
 }
 
 headingColor();
@@ -135,5 +136,12 @@ const mainList = () => {
   document.querySelector(".navbar").style.color = main;
 };
 mainList();
+
+const leftmid = () => {
+  let yellow = "yellow";
+  document.querySelector(".left-middle").style.backgroundColor = yellow;
+  document.querySelector(".left-middle .color-value").innerHTML = yellow;
+};
+leftmid();
 // console.log("bojc", bkObj);
 // console.log("volume", bkObj.volume);
