@@ -139,9 +139,12 @@ mainList();
 
 const leftmid = () => {
   let yellow = "yellow";
+  let black = "black";
   document.querySelector(".left-middle").style.backgroundColor = yellow;
   document.querySelector(".left-middle .color-value").innerHTML = yellow;
+  document.querySelector(".left-middle .color-value").style.color = black;
 };
 leftmid();
+
 // console.log("bojc", bkObj);
 // console.log("volume", bkObj.volume);
