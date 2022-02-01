@@ -8,7 +8,7 @@ const everydayPack = new Backpack(
   12,
   10,
   10,
-  false,
+  true,
   "January 17, 2022 5:57:00 PST"
 );
 
@@ -36,7 +36,7 @@ const content = `
         everydayPack.strapLength.right
       } inches</span></li>
       <li class="packprop backpack__lid">Lid status:<span> ${
-        everydayPack.lidOpen
+        everydayPack.lidOpen ? "opened" : "closed"
       }</span></li>
     </ul>
  
